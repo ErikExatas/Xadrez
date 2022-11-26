@@ -43,12 +43,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChessBoard\Chess.cs" />
+    <Compile Include="ChessBoard\Enums\Color.cs" />
+    <Compile Include="ChessBoard\Exceptions\DomainException.cs" />
+    <Compile Include="ChessBoard\Piece.cs" />
     <Compile Include="ChessBoard\Position.cs" />
+    <Compile Include="ChessBoard\Subclasses\Bishop.cs" />
+    <Compile Include="ChessBoard\Subclasses\King.cs" />
+    <Compile Include="ChessBoard\Subclasses\Knight.cs" />
+    <Compile Include="ChessBoard\Subclasses\Pawn.cs" />
+    <Compile Include="ChessBoard\Subclasses\Queen.cs" />
+    <Compile Include="ChessBoard\Subclasses\Rook.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Screen.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
