@@ -4,7 +4,7 @@ namespace ChessBoard
 {
     internal class Piece
     {
-        public Position Position { get; protected set; }
+        public Position Position { get; set; }
         public Color Color { get; protected set; }
         public int Movement { get; protected set; }
         public Chess Chess { get; protected set; }
