@@ -24,7 +24,7 @@ namespace ChessBoard
         }
         public void SetPiece(Piece piece, Position position)
         {
-            if (piece.Position != null)
+            if (piece.Position == position)
             {
                 throw new DomainException("Already exists piece in this position!");
             }

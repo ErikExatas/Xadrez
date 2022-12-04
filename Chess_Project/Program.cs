@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using ChessBoard;
 using ChessBoard.Subclasses;
 using ChessBoard.Enums;
@@ -38,9 +37,9 @@ namespace Chess_Project
                 }
                 Screen.PrintScreen(chess);
                 Console.WriteLine();
-                chess.GetPiece(1,0);
-                Console.WriteLine();
-                Console.ReadLine();
+                ChessMatrix chessMatrix = new ChessMatrix('C', 7);
+                Console.WriteLine(chessMatrix);
+                Console.WriteLine(chessMatrix.ToPosition());
             }
             catch (DomainException ex)
             {
