@@ -6,7 +6,7 @@ namespace ChessBoard
     {
         public int Rows { get; set; }
         public int Columns { get; set; }
-        private readonly Piece[,] Piece;
+        public Piece[,] Piece { get; private set; }
 
         public Chess(int rows, int columns)
         {
@@ -30,6 +30,16 @@ namespace ChessBoard
             }
             Piece[position.Row, position.Column] = piece;
             piece.Position = position;
+        }
+        public Piece RemovePiece(Piece piece, Position position)
+        {
+            if (Piece[position.Row, position.Column] == null)
+            {
+                return null;
+            }
+            piece.Position = position;
+            Piece[position.Row, position.Column] = piece;
+            return Piece[position.Row, position.Column];
         }
         public void PrintPiece(int row, int column)
         {

@@ -12,30 +12,10 @@ namespace Chess_Project
         {
             try
             {
-                Chess chess = new Chess(8, 8);
-                King king = new King(Color.White, chess);
-                Rook rook = new Rook(Color.White, chess);
-                Queen queen = new Queen(Color.White, chess);
-                Knight knight = new Knight(Color.White, chess);
-                Bishop bishop = new Bishop(Color.White, chess);
-                Pawn pawn = new Pawn(Color.White, chess);
-                chess.SetPiece(rook, new Position(0, 0));
-                chess.SetPiece(rook, new Position(0, 7));
-                chess.SetPiece(knight, new Position(0, 1));
-                chess.SetPiece(knight, new Position(0, 6));
-                chess.SetPiece(bishop, new Position(0, 2));
-                chess.SetPiece(bishop, new Position(0, 5));
-                chess.SetPiece(queen, new Position(0, 3));
-                chess.SetPiece(king, new Position(0, 4));
+                Match match = new Match();
+                match.PutPiece();
 
-                for (int i = 0; i < chess.Rows; i++)
-                {
-                    for (int j = 0; j < chess.Columns; j++)
-                    {
-                        chess.SetPiece(pawn, new Position(1, j));
-                    }
-                }
-                Screen.PrintScreen(chess);
+                Screen.PrintScreen(match.Chess);
                 Console.WriteLine();
                 ChessMatrix chessMatrix = new ChessMatrix('C', 7);
                 Console.WriteLine(chessMatrix);

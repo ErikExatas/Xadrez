@@ -14,6 +14,10 @@ namespace ChessBoard
             Color = color;
             Chess = chess;
         }
+        public void Movements()
+        {
+            Movement++;
+        }
         public virtual void Print()
         {
         }

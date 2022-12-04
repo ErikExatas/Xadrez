@@ -47,6 +47,7 @@
     <Compile Include="ChessBoard\ChessMatrix.cs" />
     <Compile Include="ChessBoard\Enums\Color.cs" />
     <Compile Include="ChessBoard\Exceptions\DomainException.cs" />
+    <Compile Include="ChessBoard\Match.cs" />
     <Compile Include="ChessBoard\Piece.cs" />
     <Compile Include="ChessBoard\Position.cs" />
     <Compile Include="ChessBoard\Subclasses\Bishop.cs" />
