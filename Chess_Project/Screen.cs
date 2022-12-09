@@ -27,6 +27,13 @@ namespace Chess_Project
                 Console.WriteLine();
             }
         }
+        public static ChessMatrix ReadPosition()
+        {
+            string s = Console.ReadLine();
+            char column = s[0];
+            int row = int.Parse(s[1] + "");
+            return new ChessMatrix(column, row);
+        }
         public static void Print(Piece piece)
         {
             if (piece.Color == Color.Black)

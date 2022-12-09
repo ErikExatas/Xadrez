@@ -15,11 +15,18 @@ namespace Chess_Project
                 Match match = new Match();
                 match.PutPiece();
 
-                Screen.PrintScreen(match.Chess);
-                Console.WriteLine();
-                ChessMatrix chessMatrix = new ChessMatrix('C', 7);
-                Console.WriteLine(chessMatrix);
-                Console.WriteLine(chessMatrix.ToPosition());
+                while (!match.Finished)
+                {
+                    Screen.PrintScreen(match.Chess);
+                    Console.WriteLine();
+                    Console.Write("Begin: ");
+                    Position origin = Screen.ReadPosition().ToPosition();
+                    Console.Write("Final: ");
+                    Position final = Screen.ReadPosition().ToPosition();
+                    match.Movement(origin, final);
+                    Console.Clear();
+                }
+                
             }
             catch (DomainException ex)
             {

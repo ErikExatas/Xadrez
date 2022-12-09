@@ -24,22 +24,23 @@ namespace ChessBoard
         }
         public void SetPiece(Piece piece, Position position)
         {
-            if (piece.Position == position)
+            if (piece.Position != null)
             {
                 throw new DomainException("Already exists piece in this position!");
             }
             Piece[position.Row, position.Column] = piece;
             piece.Position = position;
         }
-        public Piece RemovePiece(Piece piece, Position position)
+        public Piece RemovePiece(Position position)
         {
-            if (Piece[position.Row, position.Column] == null)
+            if (GetPiece(position) == null)
             {
                 return null;
             }
-            piece.Position = position;
-            Piece[position.Row, position.Column] = piece;
-            return Piece[position.Row, position.Column];
+            Piece piece = GetPiece(position);
+            piece.Position = null;
+            Piece[position.Row, position.Column] = null;
+            return piece;
         }
         public void PrintPiece(int row, int column)
         {
