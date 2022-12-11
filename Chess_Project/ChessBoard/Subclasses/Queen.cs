@@ -8,6 +8,10 @@ namespace ChessBoard.Subclasses
         public Queen(Color color, Chess chess) : base(color, chess)
         {
         }
+        public override bool[,] PossibleMovements()
+        {
+            throw new NotImplementedException();
+        }
         public override void Print()
         {
             Console.Write("Q");

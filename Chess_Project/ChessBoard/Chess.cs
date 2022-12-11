@@ -46,10 +46,17 @@ namespace ChessBoard
         {
             Piece[row, column].Print();
         }
-
+        public bool ValidatePosition(Position position)
+        {
+            if (position.Row < 0 || position.Row >= Rows || position.Column < 0 || position.Column >= Columns)
+            {
+                return false;
+            }
+            return true;
+        }
         public void PositionException(Position position)
         {
-            if (position.Row < 0 || position.Row >= 8 || position.Column < 0 || position.Column >= 8)
+            if (!(ValidatePosition(position)))
             {
                 throw new DomainException("Invalid position!");
             }
